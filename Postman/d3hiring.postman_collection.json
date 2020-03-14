@@ -1,0 +1,122 @@
+{
+	"variables": [],
+	"info": {
+		"name": "d3hiring",
+		"_postman_id": "e0de968a-ded1-baf7-aaf9-639c41fd57fd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/register",
+			"request": {
+				"url": "localhost:3003/api/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\": \"teacherken@gmail.com\",\r\n  \"students\":\r\n    [\r\n      \"studentjon@gmail.com\",\r\n      \"studenthon@gmail.com\"\r\n    ]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/api/commonstudents",
+			"request": {
+				"url": {
+					"raw": "localhost:3003/api/commonstudents?teacher=teacherken%40gmail.com&teacher=teacherhon%40gmail.com&teacher=teacsherhon%40gmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"commonstudents"
+					],
+					"query": [
+						{
+							"key": "teacher",
+							"value": "teacherken%40gmail.com",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "teacher",
+							"value": "teacherhon%40gmail.com",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "teacher",
+							"value": "teacsherhon%40gmail.com",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\": \"teacherken@gmail.com\",\r\n  \"students\":\r\n    [\r\n      \"studentjon@gmail.com\",\r\n      \"studenthon@gmail.com\"\r\n    ]\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/api/suspend",
+			"request": {
+				"url": "localhost:3003/api/suspend",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"student\" : \"studentmary@gmail.com\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/api/retrievefornotifications",
+			"request": {
+				"url": "localhost:3003/api/retrievefornotifications",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"teacher\":  \"teacherken@gmail.com\",\r\n  \"notification\": \"Hello students! @studentagnes@gmail.com @studentmiche@gmail.com @bhavna@gmail.com\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

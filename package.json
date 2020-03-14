@@ -1,0 +1,58 @@
+{
+  "name": "d3hiring",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "mocha --recursive tests",
+    "buildDev": "rm -rf dist && webpack --mode development",
+    "startServer": "node ./dist/app.js",
+    "test-jenkins": "JUNIT_REPORT_PATH=./report.xml mocha --colors --reporter mocha-jenkins-reporter --recursive tests --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naisargparmar/d3hiring.git"
+  },
+  "keywords": [
+    "Nodejs api"
+  ],
+  "author": "Naisarg Parmar",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.6.2",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "config": "^3.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.2.0",
+    "mocha-jenkins-reporter": "^0.4.2",
+    "moment": "^2.24.0",
+    "mongoose": "^5.6.9",
+    "mongoose-unique-validator": "^2.0.3",
+    "multer": "^1.4.2",
+    "mysql": "^2.18.1",
+    "node-forge": "^0.9.0",
+    "path": "^0.12.7"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.4",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "nodemon": "^1.19.4",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
